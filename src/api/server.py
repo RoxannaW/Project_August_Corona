@@ -6,7 +6,7 @@ import json
 
 app = Flask(__name__)
 
-#S="B85918591859851"#example, still have to calculate the true value of S
+
 
 @app.route("/")
 def default():
@@ -16,14 +16,14 @@ def default():
 @app.route('/get/Token', methods=['GET'])
 def get_token():
     group_id_number = None
+    N = "C99"
    
     if 'group_id' in request.args:
         group_id_number = str(request.args['group_id'])
     
-    if group_id_number == "C99":
-    #Maybe have to add in the form of a variable N?
+    if group_id_number == N:
         return "{'token': B85918591859851}" 
-        #Maybe have  to add S in form of a variable?
+        
 
     else:
          return "This is a message of error" + "<br>" + "<br>" + str(request.args)
@@ -32,11 +32,14 @@ def get_token():
 @app.route('/get/Json', methods=['GET'])
 def get():
     token_id_number = None
+    S =  "B85918591859851" 
+    #example, still have to calculate the true value of S
+    
     if 'token_id' in request.args:
         token_id_number = str(request.args['token_id'])
     
-    if token_id_number == "B85918591859851":
-    #Maybe have to add in the form of a variable N?
+    if token_id_number == S:
+
         return jsonify(col_1=[3, 2, 1, 0], col_2=['a', 'b', 'c', 'd']) 
         #Have to add the information that is assigned to our group 
 
