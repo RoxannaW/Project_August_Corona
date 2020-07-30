@@ -34,13 +34,14 @@ def get():
     token_id_number = None
     S =  "B85918591859851" 
     #example, still have to calculate the true value of S
+    json_mean_total_cases = {"d_averages": {"Brazil":433891.216981132,"Iran":92607.858490566,"Mexico":75239.5147058823,"Netherlands":24519.1132075472,"Spain":132212.9099526066}}
     
     if 'token_id' in request.args:
         token_id_number = str(request.args['token_id'])
     
     if token_id_number == S:
 
-        return jsonify(col_1=[3, 2, 1, 0], col_2=['a', 'b', 'c', 'd']) 
+        return json_mean_total_cases
         #Have to add the information that is assigned to our group 
 
     else:
