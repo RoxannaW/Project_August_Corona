@@ -34,7 +34,7 @@ def get():
     token_id_number = None
     S =  "B85918591859851" 
     #example, still have to calculate the true value of S
-    json_mean_total_cases = {"d_averages": {"Brazil":433891.216981132,"Iran":92607.858490566,"Mexico":75239.5147058823,"Netherlands":24519.1132075472,"Spain":132212.9099526066}}
+    json_mean_total_cases = 
     
     if 'token_id' in request.args:
         token_id_number = str(request.args['token_id'])
