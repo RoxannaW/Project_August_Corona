@@ -32,13 +32,6 @@ def get_token():
     else:
          return "This is a message of error" + "<br>" + "<br>" + str(request.args)
 
-#opening json file and converting to dictionary "..\\utils\Mean_per_day.json"
-#path = "Roxanna\\Resources\\mean.json"
-#path = "C:\\Users\\Roxan\\OneDrive\\Documentos\\Repo_August_project\\Project_August_Corona\\Roxanna\\Resources\\mean.json"
-#with open(path, "r+") as outfile:
-    #json_mean_total_cases = json.load(outfile)       
-
-#json_mean_total_cases = open_json(path)
 
 
 @app.route('/get/Json', methods=['GET'])
